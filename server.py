@@ -34,6 +34,8 @@ def loginUsuario():
     loginUsuario = request.form["loginUsuario"]
     passwordUsuario = request.form["passwordUsuario"]
 
+    print( request.form )
+
     for usuario in listaUsuarios:
         if usuario["identificador"] == loginUsuario and usuario["password"] == passwordUsuario:
             session["nombre"] = usuario["nombre"]
